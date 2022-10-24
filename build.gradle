@@ -32,10 +32,10 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/muntasir84/github-pkg")
+            url = uri("https://maven.pkg.github.com/" + System.getenv("GITHUB_USERNAME") + "/github-pkg")
             credentials {
-                username = "muntasir84"
-                password = "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"
+                username = System.getenv("GITHUB_USERNAME")
+                password = System.getenv("GITHUB_PKG_TOKEN")
             }
         }
     }
